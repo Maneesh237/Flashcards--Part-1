@@ -1,0 +1,39 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body{
+  background-image: url(https://img.freepik.com/free-vector/potted-plant-doodle-vector-background_53876-126321.jpg?w=2000);
+  color: black;
+}
+
+.card {
+  height: 250px;
+  border-radius: 2px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-shadow: 0 0 5px 2px #0000004d;
+  transform-style: preserve-3d;
+  transition: .15s;
+  transform: perspective(1000px) rotateX(var(--rotate-X, 0));
+  background-color: transparent;
+}
+
+.card.flipped{
+  --rotate-X: 180deg;
+}
+
+.card .front,
+.card .back {
+  font-weight: 900;
+  backface-visibility:hidden;
+}
+ 
+.card .back {
+  transform: rotateX(180deg);
+}
